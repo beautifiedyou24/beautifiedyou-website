@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+.antd-table-row:hover {
+  cursor: pointer;
+}
+
+.ant-menu-item-selected {
+  /* color: whitesmoke !important; */
+  font-weight: bold;
+  border: none;
+  box-shadow: none !important;
+}
+
+.ant-menu-item:hover {
+  box-shadow: none !important;
+}
+
+/* pagination classes */
+.custom-pagination .ant-pagination-item,
+.custom-pagination .ant-pagination-prev,
+.custom-pagination .ant-pagination-next {
+  border: none;
+  font-weight: 200;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 0.9rem;
+  color: #42183F;
+  transition: all 0.3s ease;
+}
+
+.custom-pagination .ant-pagination-item:hover,
+.custom-pagination .ant-pagination-prev:hover,
+.custom-pagination .ant-pagination-next:hover {
+  border-bottom-color: #42183F;
+  color: #42183F;
+}
+
+.custom-pagination .ant-pagination-item-active {
+  border-bottom-color: #42183F;
+  color: #42183F;
+}
+
+.custom-pagination .ant-pagination-item-link {
+  border: none;
+}
+
+/* buttons */
+.discount-button:hover {
+  background-color: #654321 !important;
+  color: white
+}
+
+.discount-button {
+  background-color: #e9d203;
+  color: black;
+}
+
+#import-button:hover {
+  background-color: #42183F !important;
+  color: white
+}
+
+#import-button {
+  background-color: #94568C;
+}
+
+.ant-menu-item-selected {
+  color: #42183F !important;
+  background-color: #fce7f3 !important;
+  border-bottom: 2px solid #94568C;
+}
+
+/* .ant-menu-item {
+  background-color: #fce7f3 !important;
+} */
+
+/* scrollbar */
+
+/* For WebKit-based browsers (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 8px;
+  margin-top: '10 px'
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Color of the track (area behind the scrollbar) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #df6aa4;
+  /* Color of the scrollbar thumb */
+  border-radius: 4px;
+  /* Rounded edges of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ecb9d3;
+  /* Color of the scrollbar thumb on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: initial;
+  /* Width of the scrollbar */
+  scrollbar-color: #EBAECC transparent;
+
+  /* Color of the scrollbar thumb and track */
+}

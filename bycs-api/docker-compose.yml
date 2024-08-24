@@ -1,0 +1,34 @@
+services:
+  bysc-api:
+    container_name: bycs-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT}:${PORT}
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    networks:
+      - bycs-network
+    depends_on:
+      - bycs-db
+
+  bycs-db:
+    image: mongo:latest
+    restart: unless-stopped
+    ports:
+      - "27018:27017"
+    volumes:
+      - bycs-db-data:/data/db
+    networks:
+      - bycs-network
+
+networks:
+  bycs-network:
+    driver: bridge
+
+volumes:
+  bycs-db-data:

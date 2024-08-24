@@ -1,0 +1,20 @@
+services:
+  bycs-web:
+    container_name: bycs-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT}:${PORT}
+    environment:
+      - NEXT_PUBLIC_API_URL=http://bycs-api:3000
+      - NEXT_PUBLIC_URL=http://localhost:5000
+    volumes:
+      - .:/app
+    networks:
+      - beautified-you
+    restart: unless-stopped
+
+networks:
+  beautified-you:
+    external: false
